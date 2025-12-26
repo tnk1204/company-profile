@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fremed Profile 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Mona Sans Font -->
+    <link href="https://cdn.jsdelivr.net/npm/mona-sans@1.0.1/css/mona-sans.min.css" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              fremed: {
+                dark: '#007e40',
+                light: '#8cc240',
+              }
+            },
+            fontFamily: {
+              // Map existing class names to Mona Sans to update entire app instantly
+              montserrat: ['"Mona Sans"', 'sans-serif'],
+              arial: ['"Mona Sans"', 'sans-serif'],
+              sans: ['"Mona Sans"', 'sans-serif'],
+            },
+            animation: {
+              'slide-next': 'slideInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'slide-prev': 'slideInLeft 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'fade-in-right': 'fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'fade-in-left': 'fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'zoom-in': 'zoomIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'scale-x': 'scaleX 0.8s ease-out forwards',
+              'bounce-in': 'bounceIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+            },
+            keyframes: {
+              slideInRight: {
+                'from': { transform: 'translateX(100%)', opacity: '0.5' },
+                'to': { transform: 'translateX(0)', opacity: '1' }
+              },
+              slideInLeft: {
+                'from': { transform: 'translateX(-100%)', opacity: '0.5' },
+                'to': { transform: 'translateX(0)', opacity: '1' }
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeInRight: {
+                '0%': { opacity: '0', transform: 'translateX(-40px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              fadeInLeft: {
+                '0%': { opacity: '0', transform: 'translateX(40px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              zoomIn: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              scaleX: {
+                '0%': { transform: 'scaleX(0)' },
+                '100%': { transform: 'scaleX(1)' },
+              },
+              bounceIn: {
+                '0%': { opacity: '0', transform: 'scale(0.3)' },
+                '50%': { opacity: '1', transform: 'scale(1.05)' },
+                '70%': { transform: 'scale(0.9)' },
+                '100%': { transform: 'scale(1)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden; /* Prevent scrolling for slide effect */
+        background-color: #f3f4f6;
+        font-family: 'Mona Sans', sans-serif;
+      }
+      .slide-container {
+        aspect-ratio: 16/9;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
